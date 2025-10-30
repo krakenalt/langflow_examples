@@ -97,7 +97,7 @@ class GigaChatModelComponent(LCModelComponent):
         IntInput(
             name="timeout",
             display_name="Timeout",
-            info="The timeout for requests to OpenAI completion API.",
+            info="The timeout for requests to GigaChat completion API.",
             advanced=True,
             value=700,
         ),

@@ -120,6 +120,14 @@ uv run lfx serve lfx_examples/simple_gigachat_flow.py
 Во вкладке Playground можно протестировать работу:
 
 ![Playground](docs/playground.png)
+
+Также в папке `flow_examples/` лежат примеры, которые можно импортировать: Простой чат-бот, RAG по загруженному документу и простой агент. 
+
+Чтобы импортировать flow, нужно нажать на кнопку `Upload a flow`
+
+![Upload a flow](docs/upload_flow.png)
+
+
 ### 2.2 Использование Langflow с помощью uv run
 
 ### 2.3 Использование Langlow как Docker контейнер
