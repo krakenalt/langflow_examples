@@ -27,7 +27,6 @@ brew install uv
 2) Установите зависимости проекта:
 
 ```bash
-cd /Users/riyakupov/PycharmProjects/langflow_examples
 uv sync
 ```
 
