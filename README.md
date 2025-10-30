@@ -174,7 +174,7 @@ langflow_examples/
   │   └─ gigachat_components_lfx/
   │       └─ gigachat_chat_model.py      # Компонент GigaChat для lfx
   ├─ pyproject.toml                      # Основные зависимости проекта
-  ├─ uv.lock                             # lock-файл для uv
+  └─  uv.lock                             # lock-файл для uv
 ```
 
 ## Подсказки и устранение неполадок
