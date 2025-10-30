@@ -43,9 +43,9 @@ OPENAI_API_KEY=sk-...
 
 GIGACHAT_CREDENTIALS=YOUR_GIGACHAT_TOKEN
 # Доп. параметры для GigaChat (обычно значения по умолчанию подходят)
+# GIGACHAT_SCOPE=GIGACHAT_API_{CORP/PERS/B2B} (по умолчанию PERS)
 # GIGACHAT_BASE_URL=...
 # GIGACHAT_AUTH_URL=...
-# GIGACHAT_SCOPE=GIGACHAT_API_CORP
 
 # Для HTTP-запросов к запущенному Langflow
 LANGFLOW_API_KEY=0
@@ -69,6 +69,8 @@ LANGFLOW_API_KEY=0
 Оба файла создают `Graph` и читают ввод из `ChatInput`.
 
 ```bash
+# Доступные аргументы:
+uv run lfx run --help
 # OpenAI пример
 uv run lfx run lfx_examples/simple_agent_openai.py "Как дела?"
 
@@ -78,18 +80,19 @@ uv run lfx run lfx_examples/simple_gigachat_flow.py "Привет"
 
 Требуемые переменные окружения:
 - Для OpenAI: `OPENAI_API_KEY` (и при необходимости `OPENAI_API_BASE`).
-- Для GigaChat: `GIGACHAT_CREDENTIALS` (токен), остальные параметры берутся по умолчанию из SDK.
+- Для GigaChat: `GIGACHAT_CREDENTIALS` (токен), `GIGACHAT_SCOPE` остальные параметры берутся по умолчанию из SDK.
 
 ### 1.2 Запуск графов с помощью lfx serve (как API)
 
 ```bash
+# Доступные аргументы:
+uv run lfx serve --help
 # OpenAI пример
-uv run lfx serve lfx_examples/simple_agent_openai.py
+uv run lfx serve lfx_examples/simple_agent_openai.py  --env-file .env
 
 # GigaChat пример (нужен GIGACHAT_CREDENTIALS в .env)
-uv run lfx serve lfx_examples/simple_gigachat_flow.py
+uv run lfx serve lfx_examples/simple_gigachat_flow.py --env-file .env
 ```
-
 Подробнее можно ознакомиться по ссылке: [lfx](https://pypi.org/project/lfx/0.1.13/)
 
 ## Вариант 2. Кастомные компоненты для Langflow (UI)
