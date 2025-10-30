@@ -103,35 +103,35 @@ uv run lfx serve lfx_examples/simple_gigachat_flow.py
 
 **Использование компонент**
 
-![Flow overview](docs/flow_overview.png)
+![Flow overview](images/flow_overview.png)
 
 В нижнем левом углу экрана выберите `+ New Custom Component`:
 
-![Flow](docs/flow.png)
+![Flow](images/flow.png)
 
 Нажмите на кнопку Code и скопируйте нужный компонент(chat_model, embeddings)
-![Custom component](docs/custom_component.png)
-![Edit code](docs/edit_code.png)
+![Custom component](images/custom_component.png)
+![Edit code](images/edit_code.png)
 
 Подключите модель коннекторами
 
-![Simple flow](docs/simple_flow.png)
+![Simple flow](images/simple_flow.png)
 
 Во вкладке Playground можно протестировать работу:
 
-![Playground](docs/playground.png)
+![Playground](images/playground.png)
 
 Также в папке `flow_examples/` лежат примеры, которые можно импортировать: Простой чат-бот, RAG по загруженному документу и простой агент. 
 
-![Playground vector store](docs/vector_store.png)
+![Playground vector store](images/vector_store.png)
 
-![Playground calculator](docs/agent_calculator.png)
+![Playground calculator](images/agent_calculator.png)
 
-![Playground url](docs/agent_url.png)
+![Playground url](images/agent_url.png)
 
 Чтобы импортировать flow, нужно нажать на кнопку `Upload a flow`
 
-![Upload a flow](docs/upload_flow.png)
+![Upload a flow](images/upload_flow.png)
 
 
 ### 2.2 Использование Langflow с помощью uv run
@@ -161,9 +161,12 @@ uvx langflow run --host 127.0.0.1 --port 8001
 ## Структура репозитория
 
 ```text
-/Users/riyakupov/PycharmProjects/langflow_examples/
+langflow_examples/
+  ├─ flow_examples # Примеры flow, которые можно загрузить
   ├─ gigachat_components/                # Кастомные компоненты для Langflow UI
-  │   └─ gigachat_chat_model.py
+  │   ├─ gigachat_chat_model.py
+  │   └─ gigachat_embeddings.py
+  ├─ images/ # Примеры с изображениями
   ├─ lfx_examples/                       # Примеры для lfx (без UI) и HTTP-запросов
   │   ├─ simple_agent_openai.py
   │   ├─ simple_gigachat_flow.py
@@ -172,7 +175,6 @@ uvx langflow run --host 127.0.0.1 --port 8001
   │       └─ gigachat_chat_model.py      # Компонент GigaChat для lfx
   ├─ pyproject.toml                      # Основные зависимости проекта
   ├─ uv.lock                             # lock-файл для uv
-  └─ langflow.log                        # файл логов (создаётся примерами)
 ```
 
 ## Подсказки и устранение неполадок
@@ -182,7 +184,3 @@ uvx langflow run --host 127.0.0.1 --port 8001
 - **401/403 при запросе к Flow**: проверьте `LANGFLOW_API_KEY` и что сервер Langflow запущен на `127.0.0.1:8001`.
 - **GigaChat авторизация**: проверьте валидность `GIGACHAT_CREDENTIALS` и (при необходимости) корпоративный `scope`.
 - **OpenAI доступ**: проверьте `OPENAI_API_KEY` и лимиты/региональные настройки. Для совместимых API укажите `OPENAI_API_BASE`.
-
-## Лицензия
-
-Укажите условия лицензирования, если требуется (например, MIT). Если файла LICENSE нет — оставьте этот раздел как напоминание.
