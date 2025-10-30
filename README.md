@@ -52,12 +52,12 @@ LANGFLOW_API_KEY=YOUR_LANGFLOW_API_KEY
 Примечания:
 - В примерах используется `python-dotenv` для чтения `.env`. Если при запуске увидите `ImportError: dotenv`, установите пакет: `uv add python-dotenv`.
 - Зависимость `langflow` для запуска UI отдельно не входит в `pyproject.toml`. Ниже показано, как запустить UI без глобальной установки через `uvx`.
-- Для использования `cp.AgentComponent` можно воспользоваться нашей библиотекой `gpt2giga`: https://github.com/ai-forever/gpt2giga
+- Для использования `cp.AgentComponent` можно воспользоваться нашей библиотекой [gpt2giga](https://github.com/ai-forever/gpt2giga).
 ## Вариант 1. Использование lfx
 
 ### 1.1. Запуск графов с помощью lfx run (без UI)
 > [!IMPORTANT]
-> На данный момент lfx работает на langchain версии <1
+> На данный момент lfx работает на langchain версии <1.
 > Учитывайте это в своих проектах
 
 В каталоге `lfx_examples/` есть два минимальных примера:
@@ -88,7 +88,7 @@ uv run lfx serve lfx_examples/simple_agent_openai.py
 uv run lfx serve lfx_examples/simple_gigachat_flow.py
 ```
 
-Подробнее можно ознакомиться по ссылке: https://pypi.org/project/lfx/0.1.13/
+Подробнее можно ознакомиться по ссылке: [lfx](https://pypi.org/project/lfx/0.1.13/)
 
 ## Вариант 2. Кастомные компоненты для Langflow (UI)
 
@@ -139,6 +139,19 @@ uv run lfx serve lfx_examples/simple_gigachat_flow.py
 
 ### 2.2 Использование Langflow с помощью uv run
 
+```bash
+uv add langflow
+uv add langchain-gigachat
+```
+
+```bash
+uv run langflow run --components_path PATH_TO_GIGACHAT_COMPONENTS
+```
+
+После запуска компоненты будут отображаться в UI:
+
+![gigachat](images/gigachat_component.png)
+
 ### 2.3 Использование Langlow как Docker контейнер
 Чтобы подключить кастомные компоненты в Langflow UI, укажите путь к каталогу с компонентами при запуске:
 
@@ -147,13 +160,13 @@ uv run lfx serve lfx_examples/simple_gigachat_flow.py
 uvx langflow run \
   --host 127.0.0.1 \
   --port 8001 \
-  --components-path langflow_examples/gigachat_components
+  --components-path langflow_examples/gigachat
 ```
 
 Альтернативно можно использовать переменную окружения:
 
 ```bash
-export LANGFLOW_COMPONENTS_PATH=langflow_examples/gigachat_components
+export LANGFLOW_COMPONENTS_PATH=langflow_examples/gigachat
 uvx langflow run --host 127.0.0.1 --port 8001
 ```
 
