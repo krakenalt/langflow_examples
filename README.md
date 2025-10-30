@@ -144,13 +144,13 @@ uv run lfx serve lfx_examples/simple_gigachat_flow.py
 uvx langflow run \
   --host 127.0.0.1 \
   --port 8001 \
-  --components-path /Users/riyakupov/PycharmProjects/langflow_examples/gigachat_components
+  --components-path langflow_examples/gigachat_components
 ```
 
 Альтернативно можно использовать переменную окружения:
 
 ```bash
-export LANGFLOW_COMPONENTS_PATH=/Users/riyakupov/PycharmProjects/langflow_examples/gigachat_components
+export LANGFLOW_COMPONENTS_PATH=langflow_examples/gigachat_components
 uvx langflow run --host 127.0.0.1 --port 8001
 ```
 
