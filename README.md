@@ -33,6 +33,10 @@ uv sync
 3) Создайте файл `.env` в корне проекта и добавьте ключи по необходимости:
 
 ```bash
+cp .env_example .env
+```
+
+```bash
 # .env
 OPENAI_API_KEY=sk-...
 # OPENAI_API_BASE=https://api.openai.com/v1  # опционально, если используете прокси/совместимые API
@@ -44,7 +48,7 @@ GIGACHAT_CREDENTIALS=YOUR_GIGACHAT_TOKEN
 # GIGACHAT_SCOPE=GIGACHAT_API_CORP
 
 # Для HTTP-запросов к запущенному Langflow
-LANGFLOW_API_KEY=YOUR_LANGFLOW_API_KEY
+LANGFLOW_API_KEY=0
 ```
 
 Примечания:
@@ -69,7 +73,7 @@ LANGFLOW_API_KEY=YOUR_LANGFLOW_API_KEY
 uv run lfx run lfx_examples/simple_agent_openai.py "Как дела?"
 
 # GigaChat пример (нужен GIGACHAT_CREDENTIALS в .env)
-uv run lfx run lfx_examples/simple_gigachat_flow.py "Привет!"
+uv run lfx run lfx_examples/simple_gigachat_flow.py "Привет"
 ```
 
 Требуемые переменные окружения:

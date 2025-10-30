@@ -129,7 +129,7 @@ class GigaChatModelComponent(LCModelComponent):
             "base_url": self.base_url,
             "auth_url": self.auth_url,
             "credentials": SecretStr(self.credentials).get_secret_value() if self.credentials else os.environ.get("GIGACHAT_CREDENTIALS"),
-            "scope": self.scope,
+            "scope": os.environ.get("GIGACHAT_SCOPE", self.scope),
             "model": self.model,
             "profanity_check": self.profanity_check,
             "user": self.user,
