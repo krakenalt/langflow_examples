@@ -7,7 +7,7 @@
 
 Предусмотрены два набора компонентов под разные рантаймы:
 - `lfx_examples/gigachat_components_lfx/` — компонент GigaChat для `lfx` (используется в коде без UI).
-- `gigachat_components/` — компонент GigaChat для Langflow UI.
+- `gigachat/` — компонент GigaChat для Langflow UI.
 
 ## Требования
 
@@ -161,7 +161,7 @@ uv run langflow run --components_path PATH_TO_GIGACHAT_COMPONENTS
 langflow_examples/
   ├─ docker # Пример Dockerfile и compose 
   ├─ flow_examples # Примеры flow, которые можно загрузить в Langflow
-  ├─ gigachat_components/                # Кастомные компоненты для Langflow UI
+  ├─ gigachat/                # Кастомные компоненты для Langflow UI
   │   ├─ gigachat_chat_model.py
   │   └─ gigachat_embeddings.py
   ├─ images/ # Примеры с изображениями
