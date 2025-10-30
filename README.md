@@ -56,6 +56,9 @@ LANGFLOW_API_KEY=YOUR_LANGFLOW_API_KEY
 ## Вариант 1. Использование lfx
 
 ### 1.1. Запуск графов с помощью lfx run (без UI)
+> [!IMPORTANT]
+> На данный момент lfx работает на langchain версии <1
+> Учитывайте это в своих проектах
 
 В каталоге `lfx_examples/` есть два минимальных примера:
 - `simple_agent_openai.py` — агент на OpenAI
