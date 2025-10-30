@@ -123,6 +123,12 @@ uv run lfx serve lfx_examples/simple_gigachat_flow.py
 
 Также в папке `flow_examples/` лежат примеры, которые можно импортировать: Простой чат-бот, RAG по загруженному документу и простой агент. 
 
+![Playground vector store](docs/vector_store.png)
+
+![Playground calculator](docs/agent_calculator.png)
+
+![Playground url](docs/agent_url.png)
+
 Чтобы импортировать flow, нужно нажать на кнопку `Upload a flow`
 
 ![Upload a flow](docs/upload_flow.png)
