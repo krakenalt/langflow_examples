@@ -48,6 +48,7 @@ GIGACHAT_CREDENTIALS=YOUR_GIGACHAT_TOKEN
 # GIGACHAT_AUTH_URL=...
 
 # Для HTTP-запросов к запущенному Langflow
+# Может быть любой, предназначен для защиты сервиса
 LANGFLOW_API_KEY=0
 ```
 
@@ -72,10 +73,10 @@ LANGFLOW_API_KEY=0
 # Доступные аргументы:
 uv run lfx run --help
 # OpenAI пример
-uv run lfx run lfx_examples/simple_agent_openai.py "Как дела?"
+uv run lfx run lfx_examples/simple_agent_openai.py  -f text 'Как дела?'
 
 # GigaChat пример (нужен GIGACHAT_CREDENTIALS в .env)
-uv run lfx run lfx_examples/simple_gigachat_flow.py "Привет"
+uv run lfx run lfx_examples/simple_gigachat_flow.py -f text 'Привет' 
 ```
 
 Требуемые переменные окружения:
@@ -83,7 +84,7 @@ uv run lfx run lfx_examples/simple_gigachat_flow.py "Привет"
 - Для GigaChat: `GIGACHAT_CREDENTIALS` (токен), `GIGACHAT_SCOPE` остальные параметры берутся по умолчанию из SDK.
 
 ### 1.2 Запуск графов с помощью lfx serve (как API)
-
+Нужно обязательно указать `LANGFLOW_API_KEY`, он может быть любой
 ```bash
 # Доступные аргументы:
 uv run lfx serve --help
