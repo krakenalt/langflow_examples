@@ -103,10 +103,8 @@ uv run lfx serve lfx_examples/simple_gigachat_flow.py
 
 В `requirements.txt` нужно добавить библиотеку `langchain-gigachat`
 
-**Использование компонент**
-
 ![Flow overview](images/flow_overview.png)
-
+**Использование компонент**
 В нижнем левом углу экрана выберите `+ New Custom Component`:
 
 ![Flow](images/flow.png)
