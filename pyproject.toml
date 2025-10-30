@@ -1,0 +1,15 @@
+[project]
+name = "langflow_examples"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.31",
+    "langchain-core>=0.3.66,<1.0.0",
+    "langchain-gigachat>=0.3.12",
+    "langchain-openai>=0.0.6",
+    "lfx>=0.1.13",
+    "lxml>=6.0.2",
+]

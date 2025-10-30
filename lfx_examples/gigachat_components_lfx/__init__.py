@@ -1,0 +1,1 @@
+from .gigachat_chat_model import GigaChatModelComponent
