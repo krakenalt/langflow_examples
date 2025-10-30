@@ -104,6 +104,22 @@ uv run lfx serve lfx_examples/simple_gigachat_flow.py
 **Использование компонент**
 
 ![Flow overview](docs/flow_overview.png)
+
+В нижнем левом углу экрана выберите `+ New Custom Component`:
+
+![Flow](docs/flow.png)
+
+Нажмите на кнопку Code и скопируйте нужный компонент(chat_model, embeddings)
+![Custom component](docs/custom_component.png)
+![Edit code](docs/edit_code.png)
+
+Подключите модель коннекторами
+
+![Simple flow](docs/simple_flow.png)
+
+Во вкладке Playground можно протестировать работу:
+
+![Playground](docs/playground.png)
 ### 2.2 Использование Langflow с помощью uv run
 
 ### 2.3 Использование Langlow как Docker контейнер
