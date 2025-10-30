@@ -169,7 +169,6 @@ Cписок доступных ENV переменных доступен по [�
 
 ```text
 langflow_examples/
-  ├─ docker # Пример Dockerfile и compose 
   ├─ flow_examples # Примеры flow, которые можно загрузить в Langflow
   ├─ gigachat/                # Кастомные компоненты для Langflow UI
   │   ├─ gigachat_chat_model.py
@@ -181,6 +180,8 @@ langflow_examples/
   │   ├─ request_to_flow.py
   │   └─ gigachat_components_lfx/
   │       └─ gigachat_chat_model.py      # Компонент GigaChat для lfx
+  ├─ components.Dockerfile # Пример Dockerfile
+  ├─ docker-compose.yaml # Пример compose
   ├─ pyproject.toml                      # Основные зависимости проекта
   └─ README.md
 ```
