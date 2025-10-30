@@ -154,7 +154,17 @@ uv run langflow run --components_path PATH_TO_GIGACHAT_COMPONENTS
 ![gigachat](images/gigachat_component.png)
 
 ### 2.3 Использование Langlow как Docker контейнер
-В репозитории приведен пример [Dockerfile](docker/components.Dockerfile) и [docker-compose.yaml](docker/docker-compose.yaml)
+В репозитории приведен пример [Dockerfile](components.Dockerfile) и [docker-compose.yaml](docker-compose.yaml)
+
+```bash
+docker compose up --build -d
+```
+Или:
+```bash
+docker build . -f components.Dockerfile -t gigachat-langflow:latest
+docker run -p 7860:7860 --name langflow_gigachat gigachat-langflow:latest
+```
+Cписок доступных ENV переменных доступен по [ссылке](https://docs.langflow.org/environment-variables)
 ## Структура репозитория
 
 ```text
