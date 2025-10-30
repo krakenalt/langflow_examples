@@ -16,9 +16,8 @@
 
 ## Быстрый старт (через uv)
 
-1) Установите `uv` (один из вариантов):
+1) Установите `uv`[Ссылка](https://docs.astral.sh/uv/getting-started/installation/)
 
-2) https://docs.astral.sh/uv/getting-started/installation/
 ```bash
 brew install uv
 # или скриптом:
@@ -58,13 +57,13 @@ LANGFLOW_API_KEY=YOUR_LANGFLOW_API_KEY
 ### 1.1. Запуск графов с помощью lfx run (без UI)
 > [!IMPORTANT]
 > На данный момент lfx работает на langchain версии <1.
-> Учитывайте это в своих проектах
+> Учитывайте это в своих проектах.
 
 В каталоге `lfx_examples/` есть два минимальных примера:
 - `simple_agent_openai.py` — агент на OpenAI
 - `simple_gigachat_flow.py` — модель GigaChat как LLM-компонент
 
-Оба файла создают `Graph` и читают ввод из `ChatInput`. Запускайте так:
+Оба файла создают `Graph` и читают ввод из `ChatInput`.
 
 ```bash
 # OpenAI пример
