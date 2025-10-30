@@ -152,12 +152,13 @@ uv run langflow run --components_path PATH_TO_GIGACHAT_COMPONENTS
 ![gigachat](images/gigachat_component.png)
 
 ### 2.3 Использование Langlow как Docker контейнер
-В репозитории приведен пример [Dockerfile](components.Dockerfile) и [docker-compose.yaml](docker-compose.yaml)
+В репозитории приведен пример [Dockerfile](docker/components.Dockerfile) и [docker-compose.yaml](docker/docker-compose.yaml)
 ## Структура репозитория
 
 ```text
 langflow_examples/
-  ├─ flow_examples # Примеры flow, которые можно загрузить
+  ├─ docker # Пример Dockerfile и compose 
+  ├─ flow_examples # Примеры flow, которые можно загрузить в Langflow
   ├─ gigachat_components/                # Кастомные компоненты для Langflow UI
   │   ├─ gigachat_chat_model.py
   │   └─ gigachat_embeddings.py
@@ -169,5 +170,5 @@ langflow_examples/
   │   └─ gigachat_components_lfx/
   │       └─ gigachat_chat_model.py      # Компонент GigaChat для lfx
   ├─ pyproject.toml                      # Основные зависимости проекта
-  └─  uv.lock                             # lock-файл для uv
+  └─ README.md
 ```
