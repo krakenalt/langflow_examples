@@ -1,0 +1,8 @@
+services:
+  langflow_gigachat:
+    container_name: langflow_gigachat
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7860:7860"

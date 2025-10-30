@@ -152,27 +152,7 @@ uv run langflow run --components_path PATH_TO_GIGACHAT_COMPONENTS
 ![gigachat](images/gigachat_component.png)
 
 ### 2.3 Использование Langlow как Docker контейнер
-Чтобы подключить кастомные компоненты в Langflow UI, укажите путь к каталогу с компонентами при запуске:
-
-```bash
-# Рекомендуемый способ через uvx (не требует глобальной установки langflow)
-uvx langflow run \
-  --host 127.0.0.1 \
-  --port 8001 \
-  --components-path langflow_examples/gigachat
-```
-
-Альтернативно можно использовать переменную окружения:
-
-```bash
-export LANGFLOW_COMPONENTS_PATH=langflow_examples/gigachat
-uvx langflow run --host 127.0.0.1 --port 8001
-```
-
-После запуска в UI появится кастомный компонент модели GigaChat (раздел LLM/Models). Настройте в нём:
-- `credentials` — токен GigaChat (либо оставьте пустым и задайте `GIGACHAT_CREDENTIALS` в `.env` процесса Langflow)
-- при необходимости `base_url`, `auth_url`, `scope`, `temperature`, `timeout` и др.
-
+В репозитории приведен пример [Dockerfile](components.Dockerfile) и [docker-compose.yaml](docker-compose.yaml)
 ## Структура репозитория
 
 ```text
@@ -191,11 +171,3 @@ langflow_examples/
   ├─ pyproject.toml                      # Основные зависимости проекта
   └─  uv.lock                             # lock-файл для uv
 ```
-
-## Подсказки и устранение неполадок
-
-- **dotenv не найден**: `uv add python-dotenv`.
-- **Нет команды langflow**: используйте `uvx langflow ...` (скачает и запустит Langflow в изолированной среде).
-- **401/403 при запросе к Flow**: проверьте `LANGFLOW_API_KEY` и что сервер Langflow запущен на `127.0.0.1:8001`.
-- **GigaChat авторизация**: проверьте валидность `GIGACHAT_CREDENTIALS` и (при необходимости) корпоративный `scope`.
-- **OpenAI доступ**: проверьте `OPENAI_API_KEY` и лимиты/региональные настройки. Для совместимых API укажите `OPENAI_API_BASE`.
